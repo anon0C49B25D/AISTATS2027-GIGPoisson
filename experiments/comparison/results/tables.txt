@@ -1,0 +1,2 @@
+wrote experiments\tables\small_catalogue.tex
+wrote experiments\tables\lsn.tex

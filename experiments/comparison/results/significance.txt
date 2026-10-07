@@ -1,0 +1,287 @@
+
+== diamond bulk sampling: 96 blocks, 240 m^3, NLPD at 20 m^3: NLPD at the full budget (50 episodes)
+   mean: GIG 2.9165, gamma 3.0223, gamma-mix 2.9856, LSN-quad 2.9169, LSN-MCMC 2.9231, LSN-MCMC-8k 2.9208, systematic 2.9455, random 3.2042, D-opt 2.9230, Thompson 3.2482, LUCB-GIG 2.9836, LUCB-gamma 3.0848, DAD 2.9230, BO-RBF 3.1434, BO-cat 3.1116
+   Friedman chi2 = 594.1, p = 9.5e-118
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.1059 [ -0.1197,  -0.0920]   49/50   -15.4 1.6e-18 ***  2.1e-13 *** 
+   GIG vs gamma-mix   -0.0691 [ -0.0825,  -0.0558]   48/50   -10.4 2.9e-12 ***  8.0e-12 *** 
+   GIG vs LSN-quad   -0.0004 [ -0.0030,  +0.0022]   24/50    -0.3 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0066 [ -0.0123,  -0.0010]   30/50    -2.4 3.9e-01 n.s. 8.0e-01 n.s.
+   GIG vs LSN-MCMC-8k   -0.0043 [ -0.0113,  +0.0026]   30/50    -1.3 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.0291 [ -0.0398,  -0.0184]   37/50    -5.5 4.9e-05 ***  7.7e-05 *** 
+   GIG vs random     -0.2877 [ -0.3069,  -0.2685]   50/50   -30.2 2.6e-31 ***  1.9e-13 *** 
+   GIG vs D-opt      -0.0066 [ -0.0142,  +0.0011]   29/50    -1.7 1.0e+00 n.s. 8.1e-01 n.s.
+   GIG vs Thompson   -0.3318 [ -0.3531,  -0.3105]   50/50   -31.3 4.8e-32 ***  1.9e-13 *** 
+   GIG vs LUCB-GIG   -0.0671 [ -0.0813,  -0.0530]   48/50    -9.5 4.3e-11 ***  1.4e-11 *** 
+   GIG vs LUCB-gamma   -0.1683 [ -0.1849,  -0.1517]   50/50   -20.4 1.2e-23 ***  1.9e-13 *** 
+   GIG vs DAD        -0.0066 [ -0.0142,  +0.0011]   29/50    -1.7 1.0e+00 n.s. 8.1e-01 n.s.
+   GIG vs BO-RBF     -0.2269 [ -0.2673,  -0.1866]   50/50   -11.3 1.8e-13 ***  1.9e-13 *** 
+   GIG vs BO-cat     -0.1952 [ -0.2258,  -0.1645]   50/50   -12.8 2.0e-15 ***  1.9e-13 *** 
+
+== diamond bulk sampling: 96 blocks, 240 m^3, NLPD at 20 m^3: top-1 regret at the full budget (50 episodes)
+   mean: GIG 0.0230, gamma 0.0443, gamma-mix 0.0353, LSN-quad 0.0213, LSN-MCMC 0.0260, LSN-MCMC-8k 0.0249, systematic 0.0623, random 0.5098, D-opt 0.0345, Thompson 0.6740, LUCB-GIG 0.0535, LUCB-gamma 0.0758, DAD 0.0345, BO-RBF 0.0735, BO-cat 0.0474
+   Friedman chi2 = 332.3, p = 2.1e-62
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0213 [ -0.0472,  +0.0046]    6/50    -1.7 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs gamma-mix   -0.0123 [ -0.0292,  +0.0046]    4/50    -1.5 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   +0.0017 [ -0.0200,  +0.0234]    1/50    +0.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0030 [ -0.0224,  +0.0165]    1/50    -0.3 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0019 [ -0.0058,  +0.0020]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.0393 [ -0.0797,  +0.0011]   10/50    -2.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs random     -0.4868 [ -0.5899,  -0.3836]   38/50    -9.5 1.0e-10 ***  1.1e-06 *** 
+   GIG vs D-opt      -0.0116 [ -0.0324,  +0.0093]    4/50    -1.1 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs Thompson   -0.6510 [ -0.7439,  -0.5581]   46/50   -14.1 7.5e-17 ***  1.5e-07 *** 
+   GIG vs LUCB-GIG   -0.0306 [ -0.0683,  +0.0072]    7/50    -1.6 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LUCB-gamma   -0.0529 [ -0.0976,  -0.0082]   10/50    -2.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs DAD        -0.0116 [ -0.0324,  +0.0093]    4/50    -1.1 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-RBF     -0.0506 [ -0.0994,  -0.0017]   10/50    -2.1 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-cat     -0.0245 [ -0.0645,  +0.0155]    5/50    -1.2 1.0e+00 n.s. 1.0e+00 n.s.
+
+== diamond bulk sampling: 96 blocks, 240 m^3, NLPD at 20 m^3: top-5 regret at the full budget (50 episodes)
+   mean: GIG 0.0479, gamma 0.0653, gamma-mix 0.0496, LSN-quad 0.0484, LSN-MCMC 0.0430, LSN-MCMC-8k 0.0509, systematic 0.0802, random 0.5588, D-opt 0.0582, Thompson 0.6097, LUCB-GIG 0.0219, LUCB-gamma 0.0208, DAD 0.0582, BO-RBF 0.1557, BO-cat 0.1226
+   Friedman chi2 = 435.8, p = 3.6e-84
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0174 [ -0.0293,  -0.0055]   25/50    -2.9 1.5e-01 n.s. 1.3e-02 *   
+   GIG vs gamma-mix   -0.0017 [ -0.0120,  +0.0087]   10/50    -0.3 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   -0.0005 [ -0.0052,  +0.0041]    7/50    -0.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   +0.0049 [ -0.0018,  +0.0116]    8/50    +1.5 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0030 [ -0.0102,  +0.0042]   13/50    -0.8 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.0323 [ -0.0495,  -0.0150]   35/50    -3.8 1.8e-02 *    2.0e-03 **  
+   GIG vs random     -0.5109 [ -0.5717,  -0.4501]   50/50   -16.9 4.1e-20 ***  1.9e-13 *** 
+   GIG vs D-opt      -0.0103 [ -0.0200,  -0.0005]   20/50    -2.1 9.3e-01 n.s. 2.1e-01 n.s.
+   GIG vs Thompson   -0.5618 [ -0.6170,  -0.5065]   50/50   -20.4 1.3e-23 ***  1.9e-13 *** 
+   GIG vs LUCB-GIG   +0.0260 [ +0.0127,  +0.0393]   10/50    +3.9 1.1e-02 *    1.0e-02 *   
+   GIG vs LUCB-gamma   +0.0271 [ +0.0145,  +0.0397]    7/50    +4.3 3.7e-03 **   2.6e-03 **  
+   GIG vs DAD        -0.0103 [ -0.0200,  -0.0005]   20/50    -2.1 9.3e-01 n.s. 2.1e-01 n.s.
+   GIG vs BO-RBF     -0.1078 [ -0.1424,  -0.0732]   40/50    -6.3 6.6e-06 ***  1.1e-06 *** 
+   GIG vs BO-cat     -0.0747 [ -0.1067,  -0.0427]   34/50    -4.7 1.2e-03 **   2.7e-04 *** 
+
+== diamond bulk sampling: 96 blocks, 240 m^3, NLPD at 20 m^3: top-1 regret, area under the budget curve (50 episodes)
+   mean: GIG 0.0856, gamma 0.1388, gamma-mix 0.0989, LSN-quad 0.0860, LSN-MCMC 0.0998, LSN-MCMC-8k 0.0935, systematic 0.3039, random 0.6498, D-opt 0.2007, Thompson 0.7459, LUCB-GIG 0.1081, LUCB-gamma 0.1243, DAD 0.2007, BO-RBF 0.1540, BO-cat 0.1431
+   Friedman chi2 = 303.4, p = 2.4e-56
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0532 [ -0.0770,  -0.0294]   30/50    -4.5 2.6e-03 **   2.1e-03 **  
+   GIG vs gamma-mix   -0.0133 [ -0.0352,  +0.0086]   14/50    -1.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   -0.0004 [ -0.0113,  +0.0106]    8/50    -0.1 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0142 [ -0.0308,  +0.0025]   15/50    -1.7 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0079 [ -0.0210,  +0.0052]    9/50    -1.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.2183 [ -0.2808,  -0.1559]   39/50    -7.0 4.7e-07 ***  2.7e-05 *** 
+   GIG vs random     -0.5642 [ -0.6465,  -0.4820]   49/50   -13.8 1.6e-16 ***  9.2e-13 *** 
+   GIG vs D-opt      -0.1151 [ -0.1586,  -0.0716]   37/50    -5.3 1.9e-04 ***  8.8e-04 *** 
+   GIG vs Thompson   -0.6603 [ -0.7378,  -0.5827]   47/50   -17.1 2.8e-20 ***  9.5e-08 *** 
+   GIG vs LUCB-GIG   -0.0225 [ -0.0599,  +0.0149]   16/50    -1.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LUCB-gamma   -0.0387 [ -0.0770,  -0.0005]   16/50    -2.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs DAD        -0.1151 [ -0.1586,  -0.0716]   37/50    -5.3 1.9e-04 ***  8.8e-04 *** 
+   GIG vs BO-RBF     -0.0684 [ -0.1110,  -0.0257]   26/50    -3.2 1.2e-01 n.s. 6.4e-02 n.s.
+   GIG vs BO-cat     -0.0575 [ -0.1003,  -0.0146]   24/50    -2.7 4.4e-01 n.s. 4.4e-01 n.s.
+
+== diamond bulk sampling: 96 blocks, 240 m^3, NLPD at 20 m^3: top-5 regret, area under the budget curve (50 episodes)
+   mean: GIG 0.1232, gamma 0.1655, gamma-mix 0.1304, LSN-quad 0.1263, LSN-MCMC 0.1300, LSN-MCMC-8k 0.1234, systematic 0.3540, random 0.6106, D-opt 0.2322, Thompson 0.6324, LUCB-GIG 0.1052, LUCB-gamma 0.1033, DAD 0.2322, BO-RBF 0.2417, BO-cat 0.2316
+   Friedman chi2 = 485.3, p = 1.2e-94
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0423 [ -0.0574,  -0.0271]   42/50    -5.6 3.2e-05 ***  6.1e-05 *** 
+   GIG vs gamma-mix   -0.0072 [ -0.0180,  +0.0036]   31/50    -1.3 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   -0.0030 [ -0.0102,  +0.0042]   32/50    -0.8 1.0e+00 n.s. 2.2e-01 n.s.
+   GIG vs LSN-MCMC   -0.0068 [ -0.0169,  +0.0033]   27/50    -1.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0001 [ -0.0092,  +0.0089]   27/50    -0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.2308 [ -0.2647,  -0.1969]   50/50   -13.7 1.8e-16 ***  1.9e-13 *** 
+   GIG vs random     -0.4874 [ -0.5498,  -0.4250]   50/50   -15.7 8.5e-19 ***  1.9e-13 *** 
+   GIG vs D-opt      -0.1090 [ -0.1361,  -0.0818]   45/50    -8.1 8.4e-09 ***  6.9e-08 *** 
+   GIG vs Thompson   -0.5091 [ -0.5633,  -0.4549]   50/50   -18.9 4.1e-22 ***  1.9e-13 *** 
+   GIG vs LUCB-GIG   +0.0180 [ +0.0050,  +0.0311]   18/50    +2.8 1.8e-01 n.s. 2.2e-01 n.s.
+   GIG vs LUCB-gamma   +0.0199 [ +0.0035,  +0.0364]   15/50    +2.4 3.6e-01 n.s. 1.5e-01 n.s.
+   GIG vs DAD        -0.1090 [ -0.1361,  -0.0818]   45/50    -8.1 8.4e-09 ***  6.9e-08 *** 
+   GIG vs BO-RBF     -0.1185 [ -0.1477,  -0.0892]   45/50    -8.1 6.4e-09 ***  2.0e-09 *** 
+   GIG vs BO-cat     -0.1083 [ -0.1380,  -0.0787]   45/50    -7.3 9.6e-08 ***  6.8e-10 *** 
+
+== gamma-ray survey: 192 sources, 120 Ms, NLPD at 25 Ms: NLPD at the full budget (50 episodes)
+   mean: GIG 5.4122, gamma 5.5673, gamma-mix 5.5167, LSN-quad 5.4023, LSN-MCMC 5.4031, LSN-MCMC-8k 5.4034, systematic 5.4331, random 6.1624, D-opt 5.4124, Thompson 6.0661, LUCB-GIG 5.7839, LUCB-gamma 6.1084, DAD 5.4124, BO-RBF 5.7603, BO-cat 5.7670
+   Friedman chi2 = 628.6, p = 4.3e-125
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.1551 [ -0.1706,  -0.1395]   50/50   -20.0 1.4e-23 ***  1.9e-13 *** 
+   GIG vs gamma-mix   -0.1045 [ -0.1202,  -0.0889]   48/50   -13.4 1.6e-16 ***  2.4e-12 *** 
+   GIG vs LSN-quad   +0.0099 [ +0.0040,  +0.0157]   16/50    +3.4 2.8e-02 *    5.3e-02 n.s.
+   GIG vs LSN-MCMC   +0.0091 [ +0.0022,  +0.0159]   20/50    +2.7 1.8e-01 n.s. 4.0e-01 n.s.
+   GIG vs LSN-MCMC-8k   +0.0088 [ +0.0016,  +0.0160]   19/50    +2.4 2.6e-01 n.s. 2.9e-01 n.s.
+   GIG vs systematic   -0.0209 [ -0.0304,  -0.0114]   35/50    -4.4 1.2e-03 **   8.4e-04 *** 
+   GIG vs random     -0.7503 [ -0.7727,  -0.7278]   50/50   -67.2 6.7e-48 ***  1.9e-13 *** 
+   GIG vs D-opt      -0.0002 [ -0.0027,  +0.0023]   27/50    -0.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs Thompson   -0.6539 [ -0.6816,  -0.6263]   50/50   -47.6 1.1e-40 ***  1.9e-13 *** 
+   GIG vs LUCB-GIG   -0.3717 [ -0.3982,  -0.3452]   50/50   -28.2 4.6e-30 ***  1.9e-13 *** 
+   GIG vs LUCB-gamma   -0.6963 [ -0.7489,  -0.6436]   50/50   -26.6 6.5e-29 ***  1.9e-13 *** 
+   GIG vs DAD        -0.0002 [ -0.0027,  +0.0023]   27/50    -0.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-RBF     -0.3481 [ -0.3714,  -0.3247]   50/50   -30.0 3.0e-31 ***  1.9e-13 *** 
+   GIG vs BO-cat     -0.3548 [ -0.3817,  -0.3279]   50/50   -26.5 7.3e-29 ***  1.9e-13 *** 
+
+== gamma-ray survey: 192 sources, 120 Ms, NLPD at 25 Ms: top-1 regret at the full budget (50 episodes)
+   mean: GIG 0.0109, gamma 0.0157, gamma-mix 0.0157, LSN-quad 0.0135, LSN-MCMC 0.0135, LSN-MCMC-8k 0.0135, systematic 0.0096, random 0.4310, D-opt 0.0109, Thompson 0.0516, LUCB-GIG 0.0198, LUCB-gamma 0.0359, DAD 0.0109, BO-RBF 0.0014, BO-cat 0.0003
+   Friedman chi2 = 268.3, p = 4.6e-49
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0048 [ -0.0129,  +0.0033]    2/50    -1.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs gamma-mix   -0.0048 [ -0.0129,  +0.0033]    2/50    -1.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   -0.0026 [ -0.0078,  +0.0026]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0026 [ -0.0078,  +0.0026]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0026 [ -0.0078,  +0.0026]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   +0.0013 [ -0.0057,  +0.0083]    2/50    +0.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs random     -0.4201 [ -0.5062,  -0.3340]   39/50    -9.8 4.0e-11 ***  1.3e-06 *** 
+   GIG vs D-opt      +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs Thompson   -0.0407 [ -0.0741,  -0.0073]   11/50    -2.5 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LUCB-GIG   -0.0089 [ -0.0269,  +0.0090]    3/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LUCB-gamma   -0.0250 [ -0.0536,  +0.0035]    5/50    -1.8 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs DAD        +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-RBF     +0.0095 [ +0.0009,  +0.0181]    0/50    +2.2 1.0e+00 n.s. 5.7e-01 n.s.
+   GIG vs BO-cat     +0.0105 [ +0.0018,  +0.0193]    0/50    +2.4 1.0e+00 n.s. 3.6e-01 n.s.
+
+== gamma-ray survey: 192 sources, 120 Ms, NLPD at 25 Ms: top-5 regret at the full budget (50 episodes)
+   mean: GIG 0.0085, gamma 0.0180, gamma-mix 0.0184, LSN-quad 0.0095, LSN-MCMC 0.0108, LSN-MCMC-8k 0.0107, systematic 0.0175, random 0.5812, D-opt 0.0090, Thompson 0.2092, LUCB-GIG 0.0272, LUCB-gamma 0.0421, DAD 0.0090, BO-RBF 0.0290, BO-cat 0.0284
+   Friedman chi2 = 393.2, p = 3.5e-75
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0095 [ -0.0167,  -0.0024]   10/50    -2.7 4.4e-01 n.s. 3.0e-01 n.s.
+   GIG vs gamma-mix   -0.0099 [ -0.0171,  -0.0027]   10/50    -2.8 3.6e-01 n.s. 3.0e-01 n.s.
+   GIG vs LSN-quad   -0.0011 [ -0.0027,  +0.0005]    2/50    -1.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0024 [ -0.0051,  +0.0003]    4/50    -1.8 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0023 [ -0.0048,  +0.0002]    6/50    -1.8 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.0090 [ -0.0143,  -0.0038]   22/50    -3.5 6.6e-02 n.s. 3.5e-02 *   
+   GIG vs random     -0.5727 [ -0.6143,  -0.5311]   50/50   -27.7 1.5e-29 ***  1.9e-13 *** 
+   GIG vs D-opt      -0.0006 [ -0.0018,  +0.0006]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs Thompson   -0.2007 [ -0.2324,  -0.1690]   50/50   -12.7 3.4e-15 ***  1.9e-13 *** 
+   GIG vs LUCB-GIG   -0.0188 [ -0.0315,  -0.0060]   21/50    -3.0 2.3e-01 n.s. 1.0e+00 n.s.
+   GIG vs LUCB-gamma   -0.0336 [ -0.0498,  -0.0175]   25/50    -4.2 8.4e-03 **   1.8e-01 n.s.
+   GIG vs DAD        -0.0006 [ -0.0018,  +0.0006]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-RBF     -0.0205 [ -0.0298,  -0.0113]   25/50    -4.5 3.8e-03 **   5.0e-04 *** 
+   GIG vs BO-cat     -0.0199 [ -0.0289,  -0.0109]   27/50    -4.4 4.1e-03 **   9.0e-05 *** 
+
+== gamma-ray survey: 192 sources, 120 Ms, NLPD at 25 Ms: top-1 regret, area under the budget curve (50 episodes)
+   mean: GIG 0.0313, gamma 0.0326, gamma-mix 0.0326, LSN-quad 0.0338, LSN-MCMC 0.0396, LSN-MCMC-8k 0.0323, systematic 0.1371, random 0.5784, D-opt 0.1551, Thompson 0.4893, LUCB-GIG 0.0560, LUCB-gamma 0.0588, DAD 0.1551, BO-RBF 0.0454, BO-cat 0.0401
+   Friedman chi2 = 485.0, p = 1.4e-94
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0014 [ -0.0067,  +0.0040]    2/50    -0.5 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs gamma-mix   -0.0014 [ -0.0067,  +0.0040]    2/50    -0.5 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   -0.0026 [ -0.0063,  +0.0011]    2/50    -1.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0084 [ -0.0179,  +0.0012]    4/50    -1.8 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0011 [ -0.0056,  +0.0035]    2/50    -0.5 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.1059 [ -0.1358,  -0.0759]   36/50    -7.1 2.7e-07 ***  6.4e-06 *** 
+   GIG vs random     -0.5471 [ -0.6164,  -0.4778]   47/50   -15.9 6.3e-19 ***  9.1e-08 *** 
+   GIG vs D-opt      -0.1239 [ -0.1410,  -0.1068]   48/50   -14.5 1.8e-17 ***  9.0e-08 *** 
+   GIG vs Thompson   -0.4580 [ -0.5191,  -0.3970]   46/50   -15.1 4.7e-18 ***  9.1e-08 *** 
+   GIG vs LUCB-GIG   -0.0248 [ -0.0405,  -0.0090]   15/50    -3.2 1.3e-01 n.s. 1.4e-01 n.s.
+   GIG vs LUCB-gamma   -0.0275 [ -0.0462,  -0.0088]   14/50    -3.0 2.2e-01 n.s. 2.2e-01 n.s.
+   GIG vs DAD        -0.1239 [ -0.1410,  -0.1068]   48/50   -14.5 1.8e-17 ***  9.0e-08 *** 
+   GIG vs BO-RBF     -0.0142 [ -0.0316,  +0.0033]   10/50    -1.6 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-cat     -0.0088 [ -0.0246,  +0.0069]    8/50    -1.1 1.0e+00 n.s. 1.0e+00 n.s.
+
+== gamma-ray survey: 192 sources, 120 Ms, NLPD at 25 Ms: top-5 regret, area under the budget curve (50 episodes)
+   mean: GIG 0.0538, gamma 0.0577, gamma-mix 0.0578, LSN-quad 0.0538, LSN-MCMC 0.0624, LSN-MCMC-8k 0.0571, systematic 0.2282, random 0.6467, D-opt 0.1816, Thompson 0.5662, LUCB-GIG 0.0850, LUCB-gamma 0.0893, DAD 0.1816, BO-RBF 0.0928, BO-cat 0.0874
+   Friedman chi2 = 564.0, p = 2.4e-111
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0039 [ -0.0069,  -0.0009]   10/50    -2.6 2.1e-01 n.s. 1.0e+00 n.s.
+   GIG vs gamma-mix   -0.0040 [ -0.0068,  -0.0011]   12/50    -2.8 1.7e-01 n.s. 6.0e-01 n.s.
+   GIG vs LSN-quad   +0.0000 [ -0.0005,  +0.0006]    5/50    +0.1 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0086 [ -0.0176,  +0.0005]   14/50    -1.9 9.5e-01 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0033 [ -0.0073,  +0.0008]   12/50    -1.6 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.1744 [ -0.1915,  -0.1574]   50/50   -20.6 6.9e-24 ***  1.9e-13 *** 
+   GIG vs random     -0.5929 [ -0.6323,  -0.5535]   50/50   -30.3 2.4e-31 ***  1.9e-13 *** 
+   GIG vs D-opt      -0.1278 [ -0.1392,  -0.1165]   50/50   -22.6 1.1e-25 ***  1.9e-13 *** 
+   GIG vs Thompson   -0.5124 [ -0.5477,  -0.4770]   50/50   -29.1 1.3e-30 ***  1.9e-13 *** 
+   GIG vs LUCB-GIG   -0.0312 [ -0.0409,  -0.0216]   39/50    -6.5 1.6e-06 ***  1.2e-06 *** 
+   GIG vs LUCB-gamma   -0.0355 [ -0.0460,  -0.0249]   40/50    -6.7 8.0e-07 ***  3.4e-07 *** 
+   GIG vs DAD        -0.1278 [ -0.1392,  -0.1165]   50/50   -22.6 1.1e-25 ***  1.9e-13 *** 
+   GIG vs BO-RBF     -0.0391 [ -0.0562,  -0.0219]   43/50    -4.6 1.1e-03 **   1.2e-07 *** 
+   GIG vs BO-cat     -0.0336 [ -0.0496,  -0.0176]   38/50    -4.2 3.4e-03 **   7.6e-07 *** 
+
+== hard X-ray follow-up: 192 sources, 120 ks, NLPD at 20 ks: NLPD at the full budget (50 episodes)
+   mean: GIG 6.6707, gamma 6.7349, gamma-mix 6.7171, LSN-quad 6.9556, LSN-MCMC 6.9569, LSN-MCMC-8k 6.9556, systematic 6.6748, random 8.0778, D-opt 6.6706, Thompson 7.9606, LUCB-GIG 7.8368, LUCB-gamma 8.2662, DAD 6.6939, BO-RBF 7.9220, BO-cat 7.9299
+   Friedman chi2 = 667.7, p = 2.0e-133
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0642 [ -0.0732,  -0.0552]   49/50   -14.3 2.0e-17 ***  1.9e-13 *** 
+   GIG vs gamma-mix   -0.0464 [ -0.0543,  -0.0385]   47/50   -11.8 1.8e-14 ***  2.7e-12 *** 
+   GIG vs LSN-quad   -0.2849 [ -0.3259,  -0.2439]   50/50   -14.0 4.6e-17 ***  1.9e-13 *** 
+   GIG vs LSN-MCMC   -0.2862 [ -0.3265,  -0.2460]   50/50   -14.3 2.0e-17 ***  1.9e-13 *** 
+   GIG vs LSN-MCMC-8k   -0.2848 [ -0.3264,  -0.2433]   49/50   -13.8 7.1e-17 ***  1.9e-13 *** 
+   GIG vs systematic   -0.0041 [ -0.0127,  +0.0045]   26/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs random     -1.4070 [ -1.4387,  -1.3753]   50/50   -89.2 7.2e-54 ***  1.9e-13 *** 
+   GIG vs D-opt      +0.0001 [ -0.0007,  +0.0009]    8/50    +0.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs Thompson   -1.2899 [ -1.3232,  -1.2565]   50/50   -77.7 5.4e-51 ***  1.9e-13 *** 
+   GIG vs LUCB-GIG   -1.1661 [ -1.2049,  -1.1273]   50/50   -60.5 8.7e-46 ***  1.9e-13 *** 
+   GIG vs LUCB-gamma   -1.5955 [ -1.6757,  -1.5153]   50/50   -40.0 3.2e-37 ***  1.9e-13 *** 
+   GIG vs DAD        -0.0232 [ -0.0316,  -0.0148]   36/50    -5.5 1.5e-05 ***  2.9e-05 *** 
+   GIG vs BO-RBF     -1.2513 [ -1.2932,  -1.2094]   50/50   -60.0 1.2e-45 ***  1.9e-13 *** 
+   GIG vs BO-cat     -1.2592 [ -1.2957,  -1.2227]   50/50   -69.4 1.3e-48 ***  1.9e-13 *** 
+
+== hard X-ray follow-up: 192 sources, 120 ks, NLPD at 20 ks: top-1 regret at the full budget (50 episodes)
+   mean: GIG 0.0000, gamma 0.0000, gamma-mix 0.0000, LSN-quad 0.0000, LSN-MCMC 0.0002, LSN-MCMC-8k 0.0012, systematic 0.0010, random 0.5448, D-opt 0.0000, Thompson 0.0749, LUCB-GIG 0.0090, LUCB-gamma 0.0090, DAD 0.0002, BO-RBF 0.0087, BO-cat 0.0087
+   Friedman chi2 = 455.6, p = 2.3e-88
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs gamma-mix   +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0002 [ -0.0007,  +0.0002]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0012 [ -0.0031,  +0.0008]    2/50    -1.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.0010 [ -0.0029,  +0.0010]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs random     -0.5448 [ -0.6334,  -0.4563]   45/50   -12.4 1.2e-14 ***  1.2e-07 *** 
+   GIG vs D-opt      +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs Thompson   -0.0749 [ -0.1133,  -0.0365]   14/50    -3.9 2.5e-02 *    1.8e-02 *   
+   GIG vs LUCB-GIG   -0.0090 [ -0.0219,  +0.0040]    3/50    -1.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LUCB-gamma   -0.0090 [ -0.0219,  +0.0040]    3/50    -1.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs DAD        -0.0002 [ -0.0007,  +0.0002]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-RBF     -0.0087 [ -0.0217,  +0.0043]    2/50    -1.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-cat     -0.0087 [ -0.0217,  +0.0043]    2/50    -1.4 1.0e+00 n.s. 1.0e+00 n.s.
+
+== hard X-ray follow-up: 192 sources, 120 ks, NLPD at 20 ks: top-5 regret at the full budget (50 episodes)
+   mean: GIG 0.0003, gamma 0.0005, gamma-mix 0.0005, LSN-quad 0.0003, LSN-MCMC 0.0003, LSN-MCMC-8k 0.0004, systematic 0.0002, random 0.6418, D-opt 0.0003, Thompson 0.1341, LUCB-GIG 0.0199, LUCB-gamma 0.0199, DAD 0.0004, BO-RBF 0.0202, BO-cat 0.0204
+   Friedman chi2 = 453.3, p = 7.0e-88
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0002 [ -0.0006,  +0.0002]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs gamma-mix   -0.0002 [ -0.0006,  +0.0002]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   +0.0000 [ -0.0000,  +0.0000]    1/50    +0.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0000 [ -0.0001,  +0.0000]    2/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   +0.0001 [ -0.0002,  +0.0003]    2/50    +0.7 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs random     -0.6415 [ -0.6850,  -0.5980]   50/50   -29.7 5.9e-31 ***  1.9e-13 *** 
+   GIG vs D-opt      +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs Thompson   -0.1338 [ -0.1692,  -0.0984]   40/50    -7.6 7.0e-08 ***  3.0e-07 *** 
+   GIG vs LUCB-GIG   -0.0196 [ -0.0347,  -0.0045]   13/50    -2.6 7.4e-01 n.s. 1.0e+00 n.s.
+   GIG vs LUCB-gamma   -0.0196 [ -0.0347,  -0.0045]   12/50    -2.6 7.4e-01 n.s. 1.0e+00 n.s.
+   GIG vs DAD        -0.0001 [ -0.0006,  +0.0004]    2/50    -0.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-RBF     -0.0199 [ -0.0350,  -0.0048]   13/50    -2.7 7.4e-01 n.s. 2.0e-01 n.s.
+   GIG vs BO-cat     -0.0201 [ -0.0352,  -0.0050]   13/50    -2.7 7.4e-01 n.s. 8.2e-02 n.s.
+
+== hard X-ray follow-up: 192 sources, 120 ks, NLPD at 20 ks: top-1 regret, area under the budget curve (50 episodes)
+   mean: GIG 0.0080, gamma 0.0080, gamma-mix 0.0068, LSN-quad 0.0080, LSN-MCMC 0.0086, LSN-MCMC-8k 0.0082, systematic 0.1528, random 0.6717, D-opt 0.0080, Thompson 0.5219, LUCB-GIG 0.0133, LUCB-gamma 0.0133, DAD 0.4527, BO-RBF 0.0183, BO-cat 0.0143
+   Friedman chi2 = 597.4, p = 1.9e-118
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs gamma-mix   +0.0012 [ -0.0012,  +0.0035]    0/50    +1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-quad   +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   -0.0006 [ -0.0018,  +0.0005]    2/50    -1.1 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   -0.0002 [ -0.0006,  +0.0002]    2/50    -1.2 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs systematic   -0.1448 [ -0.1775,  -0.1121]   39/50    -8.9 5.5e-10 ***  4.2e-07 *** 
+   GIG vs random     -0.6637 [ -0.7391,  -0.5884]   49/50   -17.7 5.1e-21 ***  7.9e-08 *** 
+   GIG vs D-opt      +0.0000 [ +0.0000,  +0.0000]    0/50    +0.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs Thompson   -0.5139 [ -0.5694,  -0.4583]   48/50   -18.6 6.9e-22 ***  7.9e-08 *** 
+   GIG vs LUCB-GIG   -0.0053 [ -0.0108,  +0.0002]    5/50    -1.9 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LUCB-gamma   -0.0053 [ -0.0108,  +0.0002]    5/50    -1.9 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs DAD        -0.4447 [ -0.4843,  -0.4050]   50/50   -22.5 1.8e-25 ***  7.9e-08 *** 
+   GIG vs BO-RBF     -0.0103 [ -0.0188,  -0.0018]    7/50    -2.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs BO-cat     -0.0063 [ -0.0138,  +0.0011]    3/50    -1.7 1.0e+00 n.s. 1.0e+00 n.s.
+
+== hard X-ray follow-up: 192 sources, 120 ks, NLPD at 20 ks: top-5 regret, area under the budget curve (50 episodes)
+   mean: GIG 0.0183, gamma 0.0183, gamma-mix 0.0160, LSN-quad 0.0176, LSN-MCMC 0.0181, LSN-MCMC-8k 0.0178, systematic 0.2596, random 0.6957, D-opt 0.0178, Thompson 0.5695, LUCB-GIG 0.0403, LUCB-gamma 0.0402, DAD 0.4578, BO-RBF 0.0424, BO-cat 0.0344
+   Friedman chi2 = 591.0, p = 4.3e-117
+   A vs B              A - B                95% CI  A wins       t   p_t Holm   p_W Holm
+   GIG vs gamma      -0.0000 [ -0.0000,  +0.0000]    1/50    -1.0 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs gamma-mix   +0.0023 [ -0.0002,  +0.0048]    0/50    +1.9 1.0e+00 n.s. 2.1e-01 n.s.
+   GIG vs LSN-quad   +0.0007 [ -0.0031,  +0.0044]    4/50    +0.4 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC   +0.0002 [ -0.0039,  +0.0043]    6/50    +0.1 1.0e+00 n.s. 1.0e+00 n.s.
+   GIG vs LSN-MCMC-8k   +0.0005 [ -0.0032,  +0.0043]    6/50    +0.3 1.0e+00 n.s. 7.9e-01 n.s.
+   GIG vs systematic   -0.2413 [ -0.2638,  -0.2187]   50/50   -21.5 9.1e-25 ***  1.9e-13 *** 
+   GIG vs random     -0.6774 [ -0.7202,  -0.6346]   50/50   -31.8 2.3e-32 ***  1.9e-13 *** 
+   GIG vs D-opt      +0.0006 [ -0.0001,  +0.0012]    0/50    +1.8 1.0e+00 n.s. 7.3e-01 n.s.
+   GIG vs Thompson   -0.5512 [ -0.5880,  -0.5143]   50/50   -30.1 2.9e-31 ***  1.9e-13 *** 
+   GIG vs LUCB-GIG   -0.0219 [ -0.0294,  -0.0144]   38/50    -5.9 1.9e-05 ***  1.2e-06 *** 
+   GIG vs LUCB-gamma   -0.0219 [ -0.0294,  -0.0144]   38/50    -5.9 1.9e-05 ***  1.2e-06 *** 
+   GIG vs DAD        -0.4395 [ -0.4685,  -0.4105]   50/50   -30.4 1.7e-31 ***  1.9e-13 *** 
+   GIG vs BO-RBF     -0.0241 [ -0.0368,  -0.0114]   26/50    -3.8 1.5e-02 *    1.2e-04 *** 
+   GIG vs BO-cat     -0.0160 [ -0.0282,  -0.0038]   14/50    -2.6 3.2e-01 n.s. 2.1e-02 *   
+
+wrote experiments\comparison\results\significance.csv

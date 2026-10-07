@@ -1,0 +1,7 @@
+quantity,value
+draws_per_two_stage_check,400000
+support_mass_error,4.050093593832571e-13
+predictive_moment_residual,8.780969520204895e-11
+conjugate_update_total_variation,7.610447256268984e-13
+log_besselk_relative_error,1.2914873774875126e-13
+log_besselk_recurrence_relative_error,1.367599632511653e-15

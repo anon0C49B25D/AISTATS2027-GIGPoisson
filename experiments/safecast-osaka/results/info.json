@@ -1,0 +1,48 @@
+{
+ "readings": 790823,
+ "readings_kept": 790731,
+ "logs": 256,
+ "logs_dropped": [
+  15999,
+  19833
+ ],
+ "cells": 59148,
+ "contexts": 27800,
+ "config": {
+  "name": "Osaka, 30 km, natural background",
+  "centre": [
+   34.69,
+   135.5
+  ],
+  "radius_km": 30.0,
+  "after": null,
+  "before": null,
+  "bands": [
+   0.0,
+   7.5,
+   15.0,
+   22.5,
+   30.0
+  ],
+  "cell_m": 100.0,
+  "discover": [
+   30000,
+   30
+  ]
+ },
+ "episodes": 50,
+ "catalogues": [
+  10,
+  20,
+  40,
+  100,
+  400
+ ],
+ "condition": [
+  0,
+  1,
+  2,
+  5
+ ],
+ "hold": 10
+}

@@ -1,0 +1,16 @@
+wrote experiments\comparison\results\prior_fit.csv
+both      n =  10: GIG minus gamma +0.487, mixture +2.867, skewnormal +43685067315365.258 nats per held-out source
+both      n =  20: GIG minus gamma +0.387, mixture +0.514, skewnormal +4576356386066.264 nats per held-out source
+both      n =  40: GIG minus gamma +0.313, mixture +0.187, skewnormal +924977175362.609 nats per held-out source
+both      n =  80: GIG minus gamma +0.294, mixture +0.066, skewnormal +52510661027.258 nats per held-out source
+both      n = all: GIG minus gamma +0.276, mixture +0.006, skewnormal +150123406.858 nats per held-out source
+gamma     n =  10: GIG minus gamma +0.397, mixture +3.298, skewnormal +48462498802916.031 nats per held-out source
+gamma     n =  20: GIG minus gamma +0.306, mixture +0.392, skewnormal +3490666330202.854 nats per held-out source
+gamma     n =  40: GIG minus gamma +0.266, mixture +0.185, skewnormal +244907078908.785 nats per held-out source
+gamma     n =  80: GIG minus gamma +0.246, mixture +0.072, skewnormal +66527064558.836 nats per held-out source
+gamma     n = all: GIG minus gamma +0.230, mixture +0.003, skewnormal -0.005 nats per held-out source
+hardxray  n =  10: GIG minus gamma +0.765, mixture +1.528, skewnormal +28863086125239.012 nats per held-out source
+hardxray  n =  20: GIG minus gamma +0.637, mixture +0.894, skewnormal +7944709784382.490 nats per held-out source
+hardxray  n =  40: GIG minus gamma +0.456, mixture +0.193, skewnormal +3034894649610.598 nats per held-out source
+hardxray  n =  80: GIG minus gamma +0.446, mixture +0.046, skewnormal +9024769070.537 nats per held-out source
+hardxray  n = all: GIG minus gamma +0.419, mixture +0.016, skewnormal +615881276.651 nats per held-out source

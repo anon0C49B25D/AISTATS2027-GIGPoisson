@@ -1,0 +1,45 @@
+{
+ "readings": 324235,
+ "readings_kept": 324235,
+ "logs": 120,
+ "logs_dropped": [],
+ "cells": 15522,
+ "contexts": 4939,
+ "config": {
+  "name": "Fukushima Daiichi, 60 km, 2024-2026",
+  "centre": [
+   37.4211,
+   141.0328
+  ],
+  "radius_km": 60.0,
+  "after": "2024-01-01",
+  "before": "2026-12-31",
+  "bands": [
+   0.0,
+   10.0,
+   20.0,
+   40.0,
+   60.0
+  ],
+  "cell_m": 100.0,
+  "discover": [
+   60000,
+   400
+  ]
+ },
+ "episodes": 50,
+ "catalogues": [
+  10,
+  20,
+  40,
+  100,
+  400
+ ],
+ "condition": [
+  0,
+  1,
+  2,
+  5
+ ],
+ "hold": 10
+}
