@@ -38,9 +38,10 @@ TABLE_CATALOGUES = (20, 400)
 #: Linear range of the symmetric-log axis: Osaka's differences are of order 1e-5 nats.
 LINTHRESH = 1e-4
 TABLE_LAWS = [("gamma", "gamma"), ("gammamix", "gamma mixture"), ("lognormal", "lognormal"),
-              ("compoundgamma", "compound gamma"),
               ("logskewnormal", "skew-normal on $\\log \\lambda$, penalised"),
               ("poisson", "Poisson, one rate per band")]
+#: Laws the studies fit but the manuscript does not report.
+OMITTED = ("compoundgamma",)
 
 
 def _load(study):
@@ -60,7 +61,8 @@ def figure():
         nf.means_panel(ax, cells, pop, safecast_study.PER_MINUTE, markersize=2.0,
                        legend=False)
         ax.set_title("({}) {}".format("ab"[j], title), loc="left", fontsize=8.5)
-        d = summ[(summ.score == "reading") & (summ.condition == 0) & (summ.law != "gig")]
+        d = summ[(summ.score == "reading") & (summ.condition == 0) & (summ.law != "gig")
+                 & ~summ.law.isin(OMITTED)]
         gaps.append(d)
     vals = np.concatenate([d["diff"].values for d in gaps])
     ylim = (-(10.0 ** np.ceil(np.log10(max(-vals.min(), LINTHRESH)))),
@@ -72,13 +74,12 @@ def figure():
                      loc="left", fontsize=8.5)
         ax.set_xlabel("cells per band in the catalogue")
     axes[1, 0].set_ylabel("NLPD minus the GIG's (nats)")
-    laws = ["gig", "gamma", "logskewnormal", "gammamix", "lognormal", "compoundgamma",
-            "poisson"]
+    laws = ["gig", "gamma", "logskewnormal", "gammamix", "lognormal", "poisson"]
     handles = nf.legend_handles(laws)
     obs = plt.Line2D([], [], linestyle="none", marker="o", markersize=3.5,
                      color=viz.INK["primary"], alpha=0.55)
-    names = ["GIG (= compound gamma in a, b)", "gamma", "skew-normal on log rate",
-             "gamma mixture", "lognormal", "compound gamma", "Poisson, one rate per band"]
+    names = ["GIG", "gamma", "skew-normal on log rate", "gamma mixture", "lognormal",
+             "Poisson, one rate per band"]
     fig.legend([obs] + handles, ["observed cell means"] + names, loc="outside lower center",
                ncol=4, fontsize=7)
     os.makedirs(os.path.dirname(FIGURE), exist_ok=True)

@@ -131,9 +131,8 @@ FACTORIAL = (("eig", "GIG", "EIG"), ("d-optimality", "GIG", "D-optimality"),
 #: Prior-only rows: ``results/prior_only.csv`` model name, label.
 PRIOR_ONLY = (("gig-poisson", "GIG"), ("gammamix-poisson", "gamma mixture"),
               ("gamma-poisson", "gamma"))
-#: The estimator ablation and the in-regime rivals, all selecting by EIG.
+#: The estimator ablation and the in-regime rival, all selecting by EIG.
 ESTIMATORS = (("eig@gig-pce", "GIG", "EIG by PCE"), ("eig@gig-nmc", "GIG", "EIG by nested MC"),
-              ("eig@compoundgamma-poisson", "compound gamma", "EIG"),
               ("eig@logskewnormal-quad-pen", "skew-normal (pen.)", "EIG"))
 
 
@@ -183,7 +182,7 @@ def factorial(prefix="fact_"):
              "    & & \\multicolumn{2}{c}{diamonds} & \\multicolumn{2}{c}{$\\gamma$-ray survey}"
              " & \\multicolumn{2}{c}{hard X-ray} \\\\\n",
              "    \\cmidrule(lr){3-4} \\cmidrule(lr){5-6} \\cmidrule(lr){7-8}\n",
-             "    prior & rule & NLPD & regret & NLPD & regret & NLPD & regret \\\\\n",
+             "    prior & policy & NLPD & regret & NLPD & regret & NLPD & regret \\\\\n",
              "    \\midrule\n"]
 
     def row(agent, prior, rule):
@@ -223,16 +222,14 @@ OVERHEADS = {"bulk": ((0.5, 2.0), 1.0, "m$^3$"), "gamma": ((0.25, 1.0), 0.5, "Ms
 NAMES = {"bulk": "diamonds", "gamma": "$\\gamma$-ray survey", "hardxray": "hard X-ray"}
 
 
-def overhead():
-    """Per setting and overhead c0: how often the EIG and D-optimality take a longer dwell than
-    the shortest, the NLPD and top-5 regret area of the EIG, and the paired differences of
-    D-optimality and the systematic programme from it (positive = worse than the EIG)."""
-    lines = [HEADER, "\\begin{tabular}{ll cc cc cc}\n", "    \\toprule\n",
-             "    & & \\multicolumn{2}{c}{longer dwells} & \\multicolumn{2}{c}{NLPD} & "
-             "\\multicolumn{2}{c}{top-$5$ regret area} \\\\\n",
-             "    \\cmidrule(lr){3-4} \\cmidrule(lr){5-6} \\cmidrule(lr){7-8}\n",
-             "    setting & $c_0$ & EIG & D-opt. & EIG & D-opt. $-$ EIG & EIG & D-opt. $-$ EIG \\\\\n",
-             "    \\midrule\n"]
+#: Setting names short enough for the column-width overhead table.
+SHORT_NAMES = {"bulk": "diamonds", "gamma": "$\\gamma$-ray", "hardxray": "hard X-ray"}
+
+
+def _overhead_rows():
+    """Per setting and overhead c0 with results on disk: (setting, c0, unit, share of rounds
+    in which each agent takes a longer dwell than the shortest, NLPD and top-5 regret area
+    per episode and agent)."""
     for setting in SETTINGS:
         levels, shortest, unit = OVERHEADS[setting]
         for c0 in levels:
@@ -247,10 +244,41 @@ def overhead():
             longer = 1.0 - fin.groupby("agent").frac_shortest.mean()
             if "eig" not in w or "d-optimality" not in w:
                 continue
-            lines.append("    {} & ${:g}$ {} & ${:.0f}\\%$ & ${:.0f}\\%$ & {} & {} & {} & {} \\\\\n".format(
-                NAMES[setting], c0, unit, 100 * longer.get("eig", np.nan),
-                100 * longer.get("d-optimality", np.nan), _cell(w, "eig"),
-                _cell(w, "d-optimality"), _cell(auc, "eig"), _cell(auc, "d-optimality")))
+            yield setting, c0, unit, longer, w, auc
+
+
+def overhead():
+    """Per setting and overhead c0: how often the EIG and D-optimality take a longer dwell than
+    the shortest, the NLPD and top-5 regret area of the EIG, and the paired differences of
+    D-optimality and the systematic programme from it (positive = worse than the EIG)."""
+    lines = [HEADER, "\\begin{tabular}{ll cc cc cc}\n", "    \\toprule\n",
+             "    & & \\multicolumn{2}{c}{longer dwells} & \\multicolumn{2}{c}{NLPD} & "
+             "\\multicolumn{2}{c}{top-$5$ regret area} \\\\\n",
+             "    \\cmidrule(lr){3-4} \\cmidrule(lr){5-6} \\cmidrule(lr){7-8}\n",
+             "    setting & $c_0$ & EIG & D-opt. & EIG & D-opt. $-$ EIG & EIG & D-opt. $-$ EIG \\\\\n",
+             "    \\midrule\n"]
+    for setting, c0, unit, longer, w, auc in _overhead_rows():
+        lines.append("    {} & ${:g}$ {} & ${:.0f}\\%$ & ${:.0f}\\%$ & {} & {} & {} & {} \\\\\n".format(
+            NAMES[setting], c0, unit, 100 * longer.get("eig", np.nan),
+            100 * longer.get("d-optimality", np.nan), _cell(w, "eig"),
+            _cell(w, "d-optimality"), _cell(auc, "eig"), _cell(auc, "d-optimality")))
+    lines += ["    \\bottomrule\n", "\\end{tabular}\n"]
+    return "".join(lines)
+
+
+def overhead_nlpd():
+    """The column-width version of ``overhead`` for the main text: the shares of longer dwells
+    and the paired NLPD difference of D-optimality from the EIG, without the EIG's own scores
+    and without the regret, which ``overhead`` keeps for the appendix."""
+    lines = [HEADER, "\\begin{tabular}{@{}ll cc c@{}}\n", "    \\toprule\n",
+             "    & & \\multicolumn{2}{c}{longer dwells} & NLPD \\\\\n",
+             "    \\cmidrule(lr){3-4} \\cmidrule(l){5-5}\n",
+             "    setting & $c_0$ & EIG & D-opt. & D-opt.\\ $-$ EIG \\\\\n",
+             "    \\midrule\n"]
+    for setting, c0, unit, longer, w, auc in _overhead_rows():
+        lines.append("    {} & ${:g}$ {} & ${:.0f}\\%$ & ${:.0f}\\%$ & {} \\\\\n".format(
+            SHORT_NAMES[setting], c0, unit, 100 * longer.get("eig", np.nan),
+            100 * longer.get("d-optimality", np.nan), _cell(w, "d-optimality")))
     lines += ["    \\bottomrule\n", "\\end{tabular}\n"]
     return "".join(lines)
 
@@ -258,7 +286,8 @@ def overhead():
 def main():
     os.makedirs(OUT, exist_ok=True)
     for name, text in (("small_catalogue", small_catalogue()), ("lsn", lsn()),
-                       ("factorial", factorial()), ("overhead", overhead())):
+                       ("factorial", factorial()), ("overhead", overhead()),
+                       ("overhead_nlpd", overhead_nlpd())):
         path = os.path.join(OUT, name + ".tex")
         with open(path, "w") as fh:
             fh.write(text)

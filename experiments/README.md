@@ -11,6 +11,7 @@ Grouped by where the rates come from.
 | `gamma-ray/` | Fermi-LAT 4FGL | scheduling telescope time over source classes |
 | `hard-xray/` | Swift-BAT | also schedules telescope time over source classes |
 | `comparison/` | the three above | every agent on every setting, one harness: the paper's Section 6 |
+| `eig-accuracy/` | fitted priors of the three above | how far the deterministic EIG is from a tighter reference, also where its support cap binds |
 | `safecast-fukushima/` | measured Geiger counts (Safecast) | the priors fitted to measured counts of a heavy-tailed field: where the GIG pays |
 | `safecast-osaka/` | measured Geiger counts (Safecast) | the same on natural background, a non-overdispersed field: where it buys nothing |
 | `common/` | — | `viz.py`, the figure style every study shares; the harness and comparison figures; `countfit.py`, `natural.py` and `safecast*.py` for the two measured-count studies |
